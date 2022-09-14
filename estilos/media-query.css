@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@media print{
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #print {display: block;}
+
+    #phone, 
+    #pc, 
+    #tablet, 
+    #tv {display: none;}
+
+    main {
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    main::after {
+        content: "Produzido por Rafael Mota - github.com/rafael-mota";
+        font-size: 6em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url("../imagens/back-tablet.jpg");
+    }
+
+    #tablet {display: block;}
+
+    #phone, 
+    #pc, 
+    #print, 
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body {
+        background-image: url("../imagens/back-pc.jpg");
+    }
+
+    #pc {display: block;}
+
+    #tablet, 
+    #phone, 
+    #print,  
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 1200px){
+    body {
+        background-image: url("../imagens/back-tv.jpg");
+    }
+    
+    #tv {display: block;}
+
+    #tablet, 
+    #pc, 
+    #print, 
+    #phone {display: none;}
+}
